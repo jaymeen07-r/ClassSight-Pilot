@@ -175,4 +175,4 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 * **Developer:** JAYMEEN VAGHELA
 * **Email:** [jaymeen07@example.com](mailto:jaymeenvaghela07@gmail.com)
-* **GitHub:** [github.com/jaymeen07](https://github.com/jaymeen07)
+* **GitHub:** [github.com/jaymeen07](https://github.com/jaymeen07-r)
