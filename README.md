@@ -46,13 +46,19 @@ The platform supports **role-based access**, automation, AI-powered analytics, a
 
 ---
 
-## Contribution
+## Contribution Guidelines
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/feature_name`)
-3. Commit your changes (`git commit -m 'Add new feature'`)
-4. Push to the branch (`git push origin feature/feature_name`)
-5. Open a Pull Request
+Contributions are welcome to improve this project in a **controlled and meaningful way**.
+
+Before contributing, please read the guidelines below carefully.
+
+### How to Contribute
+
+1. Fork the repository to your GitHub account  
+2. Create a new feature branch  
+   ```bash
+   git checkout -b feature/short-description
+
 
 ---
 
