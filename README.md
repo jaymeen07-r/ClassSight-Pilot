@@ -58,7 +58,19 @@ Before contributing, please read the guidelines below carefully.
 2. Create a new feature branch  
    ```bash
    git checkout -b feature/short-description
-
+   ```
+3. Make your changes following the project’s coding standards
+4. Commit with a clear and descriptive message
+   ```bash
+   git commit -m "Add: brief description of the change"
+   ```
+5. Push the branch to your fork
+   ```bash
+   git push origin feature/short-description
+   ```
+6. Open a Pull Request with a clear explanation of:
+* What was changed
+* Why the change is needed
 
 ---
 
