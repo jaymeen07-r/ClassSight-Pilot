@@ -69,8 +69,8 @@ Before contributing, please read the guidelines below carefully.
    git push origin feature/short-description
    ```
 6. Open a Pull Request with a clear explanation of:
-* What was changed
-* Why the change is needed
+   * What was changed
+   * Why the change is needed
 
 ---
 
