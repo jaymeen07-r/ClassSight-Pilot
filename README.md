@@ -86,7 +86,7 @@ The project follows strict **security measures** to protect sensitive student, t
 
 Access to restricted datasets requires formal permission. Requests are reviewed manually, and data is provided only for responsible, approved use.
 
-For more details, see [SECURITY.md](security.md).
+For more details, see [SECURITY](Security.md).
 
 ---
 
