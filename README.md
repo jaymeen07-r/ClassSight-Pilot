@@ -54,10 +54,10 @@ VIDHYA-LLM is designed to understand academic structures, institutional workflow
 
 ### Model Identification :
 
-   **Model Name** - VIDHYA-LLM
-   **Model Numner** - VIDHYA-LLM-001
-   **zone** - public-clone-data-1
-   **version** -  1.0
+   - **Model Name** - VIDHYA-LLM
+   - **Model Numner** - VIDHYA-LLM-001
+   - **zone** - public-clone-data-1
+   - **version** -  1.0
 
 ### Purpose of VIDHYA-LLM-001 :
 
