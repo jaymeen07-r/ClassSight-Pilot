@@ -10,7 +10,7 @@ Access is **strictly limited to authorized personnel only** and governed by inst
 
 ---
 
-## 📁 List of Sensitive Data Files (Total: 25)
+## 📁 List of Sensitive Data Files (Total: 24)
 
 | No. | File Name | Data Category | Description |
 |----|-----------|--------------|-------------|
@@ -35,10 +35,9 @@ Access is **strictly limited to authorized personnel only** and governed by inst
 |19 | examination-results.db | Academic Data | Internal and board examination results |
 |20 | admission-records.xlsx | Academic Data | Admission and enrollment details |
 |21 | discipline-records.json | Student Data | Student disciplinary actions |
-|22 | transport-allocation.xlsx | Student Data | Transport routes and allocations |
-|23 | hostel-resident-data.csv | Student Data | Hostel resident student details |
-|24 | grievance-complaints.db | Administrative Data | Complaints and resolution records |
-|25 | audit-logs-system.log | System Security | System access and activity logs |
+|22 | hostel-resident-data.csv | Student Data | Hostel resident student details |
+|23 | grievance-complaints.db | Administrative Data | Complaints and resolution records |
+|24 | audit-logs-system.log | System Security | System access and activity logs |
 
 ---
 
