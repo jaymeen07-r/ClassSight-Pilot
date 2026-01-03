@@ -71,7 +71,23 @@ VIDHYA-LLM is optimized for:
 * VIDHYA-LLM is not a general-purpose chatbot
 * Outputs depend on provided institutional data
 * Final academic decisions must be validated by educators or administrators
- 
+
+---
+
+## Security & Data Protection
+
+The project follows strict **security measures** to protect sensitive student, teacher, and institutional data. Key practices include:
+
+* **Role-Based Access Control (RBAC)** to limit data access
+* **Encryption** of data at rest and in transit
+* **Access Logging** for all modifications and retrievals
+* **Secure Communication** protocols for data exchange
+* **Compliance** with institutional policies and data privacy laws
+
+Access to restricted datasets requires formal permission. Requests are reviewed manually, and data is provided only for responsible, approved use.
+
+For more details, see [SECURITY.md](security.md).
+
 ---
 
 ## Dataset Access Policy 
@@ -142,6 +158,6 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 ## Contact
 
-* **Developer:** JAYMEEN VAGHELA
+* **Developer:** JAYMEEN N. VAGHELA
 * **Email:** [jaymeenvaghela07@gmail.com](mailto:jaymeenvaghela07@gmail.com)
 * **GitHub:** [github.com/jaymeen07-r](https://github.com/jaymeen07-r)
