@@ -1,0 +1,85 @@
+===========================================
+   USER TYPES(11) - UID FORMAT & PASSWORDS
+===========================================
+
+This file contains all user types, example UIDs, UID generation rules, and default passwords.
+
+============================================================================================================
+| USER TYPE                  | UID EXAMPLE | UID FORMAT RULE                 | DEFAULT PASSWORD            |
+============================================================================================================
+| Super Admin                | SA0001      | Starts with 'SA' + 4 digits     | super@123                   |
+| Institute Admin            | ADM1023     | Starts with 'ADM' + 4 digits    | admin@123                   |
+| Exam Coordinator           | EXM4512     | Starts with 'EXM' + 4 digits    | exam@123                    |
+| Librarian                  | LIB2391     | Starts with 'LIB' + 4 digits    | lib@123                     |
+| Accountant / Fee Manager   | ACC9921     | Starts with 'ACC' + 4 digits    | acc@123                     |
+| IT Admin                   | ITA8832     | Starts with 'ITA' + 4 digits    | it@123                      |
+| Developer                  | DEV7001     | Starts with 'DEV' + 4 digits    | dev@123                     |
+| Teacher                    | 2021AB23    | 4 digits + 2 letters + 2 digits | teacher login (no password) |
+| Parent                     | P12345      | Starts with 'P' + numbers       | auto-generated              |
+| Student                    | 2021A23     | 4 digits + 1 letter + 2 digits  | no password                 |
+| Moderator                  | SchoolMod   | Fixed word                      | jaymeen07-r                 |
+============================================================================================================
+
+===============================
+   MAIN UID FORMAT EXPLANATION
+===============================
+
+1. Super Admin
+   Format: SAXXXX
+   Example: SA0001
+   Password: super@123
+
+2. Institute Admin
+   Format: ADMXXXX
+   Example: ADM1023
+   Password: admin@123
+
+3. Exam Coordinator
+   Format: EXMXXXX
+   Example: EXM4512
+   Password: exam@123
+
+4. Librarian
+   Format: LIBXXXX
+   Example: LIB2391
+   Password: lib@123
+
+5. Accountant / Fee Manager
+   Format: ACCXXXX
+   Example: ACC9921
+   Password: acc@123
+
+6. IT Admin
+   Format: ITAXXXX
+   Example: ITA8832
+   Password: it@123
+
+7. Developer
+   Format: DEVXXXX
+   Example: DEV7001
+   Password: dev@123
+
+8. Teacher
+   Format: YYYYLLDD
+   (Year + 2 letters + 2 digits)
+   Example: 2021AB23
+   Password: teacher_login / system-handled
+
+9. Parent
+   Format: PXXXX
+   Example: P12345
+   Password: auto-generated
+
+10. Student
+    Format: YYYYLDD
+    Example: 2021A23
+    Password: no password
+
+11. Moderator
+    Format: SchoolMod (fixed)
+    Password: jaymeen07-r
+
+
+===============
+   END OF FILE
+===============
