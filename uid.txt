@@ -1,6 +1,6 @@
-===========================================
+=============================================
    USER TYPES(11) - UID FORMAT & PASSWORDS
-===========================================
+=============================================
 
 This file contains all user types, example UIDs, UID generation rules, and default passwords.
 
@@ -20,9 +20,9 @@ This file contains all user types, example UIDs, UID generation rules, and defau
 | Moderator                  | SchoolMod   | Fixed word                      | jaymeen07-r                 |
 ============================================================================================================
 
-===============================
+=================================
    MAIN UID FORMAT EXPLANATION
-===============================
+=================================
 
 1. Super Admin
    Format: SAXXXX
@@ -79,7 +79,3 @@ This file contains all user types, example UIDs, UID generation rules, and defau
     Format: SchoolMod (fixed)
     Password: jaymeen07-r
 
-
-===============
-   END OF FILE
-===============
