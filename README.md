@@ -46,7 +46,7 @@ The platform supports **role-based access**, automation, AI-powered analytics, a
 
 ---
 
-## VIDHYA-LLM (Custom Educational LLM)
+## VIDHYA-LLM-001 (Custom Educational LLM)
 
 This project is powered by VIDHYA-LLM, a proprietary, domain-specific Large Language Model developed specifically for educational institutions.
 
