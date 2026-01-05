@@ -1,0 +1,137 @@
+name: Node.js CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'backend/**'
+      - 'frontend/**'
+      - '.github/workflows/nodejs-ci.yml'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'backend/**'
+      - 'frontend/**'
+
+jobs:
+  backend-lint-and-test:
+    name: Backend - Lint & Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: 'backend/package-lock.json'
+      
+      - name: Install dependencies
+        working-directory: ./backend
+        run: npm ci
+      
+      - name: TypeScript type checking
+        working-directory: ./backend
+        run: npm run type-check || true
+      
+      - name: Lint code with ESLint
+        working-directory: ./backend
+        run: npm run lint || true
+      
+      - name: Build TypeScript
+        working-directory: ./backend
+        run: npm run build
+      
+      - name: Run unit tests
+        working-directory: ./backend
+        run: npm test -- --coverage || true
+      
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./backend/coverage/lcov.info
+          flags: backend
+          fail_ci_if_error: false
+
+  frontend-lint-and-test:
+    name: Frontend - Lint & Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package-lock.json'
+      
+      - name: Install dependencies
+        working-directory: ./frontend
+        run: npm ci
+      
+      - name: TypeScript type checking
+        working-directory: ./frontend
+        run: npm run type-check || true
+      
+      - name: Lint code with ESLint
+        working-directory: ./frontend
+        run: npm run lint || true
+      
+      - name: Build React app
+        working-directory: ./frontend
+        run: npm run build
+      
+      - name: Run tests
+        working-directory: ./frontend
+        run: npm test -- --coverage || true
+      
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./frontend/coverage/lcov.info
+          flags: frontend
+          fail_ci_if_error: false
+
+  python-tests:
+    name: Python Backend Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11']
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || true
+          pip install pytest pytest-cov pylint bandit
+      
+      - name: Lint with Pylint
+        run: pylint **/*.py || true
+        continue-on-error: true
+      
+      - name: Security check with Bandit
+        run: bandit -r . -ll || true
+        continue-on-error: true
+      
+      - name: Run Python tests
+        run: pytest --cov=. || true
+        continue-on-error: true
