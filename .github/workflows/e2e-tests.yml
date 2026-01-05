@@ -1,0 +1,53 @@
+name: E2E Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          npm ci --prefix frontend
+          npm ci --prefix backend
+      
+      - name: Build frontend
+        run: npm run build --prefix frontend
+      
+      - name: Start backend server
+        run: npm start --prefix backend &
+        env:
+          NODE_ENV: test
+      
+      - name: Install Cypress
+        run: npm install -g cypress
+      
+      - name: Run E2E tests
+        run: npm run e2e --prefix frontend
+      
+      - name: Upload screenshots on failure
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-screenshots
+          path: frontend/cypress/screenshots
+      
+      - name: Upload videos
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-videos
+          path: frontend/cypress/videos
