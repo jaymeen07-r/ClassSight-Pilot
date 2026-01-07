@@ -13,6 +13,38 @@ The platform supports **role-based access**, automation, AI-powered analytics, a
 
 ---
 
+## Implementation Status
+
+**Current Phase:** Pilot/MVP Development (Active)
+
+This is a pilot project that demonstrates the core functionality of an AI-based report generation system for educational institutions. The current implementation includes:
+
+### ✅ Implemented Features
+- **Authentication System** - User login, signup, and role-based access control
+- **Core Data Models** - Student, teacher, parent, and user profile management
+- **CSV Data Handling** - Automated CSV file detection and data storage
+- **Basic Report Generation Framework** - Foundation for attendance and marks reports
+- **Modular Architecture** - Organized codebase with auth, core, model, report, dashboard, and messaging modules
+- **Security Foundations** - RBAC, access logging, and encryption support
+
+### 🚧 In Development
+- **AI-powered report generation** using VIDHYA-LLM
+- **Dashboard interface** for different user roles
+- **Email/SMS notification system** for report distribution
+- **Advanced analytics** and AI-generated insights
+- **PDF/DOCX/XLSX export** functionality
+
+### 📋 Planned (Next Versions)
+- Floating overlay GUI for instant document generation
+- Real-time AI suggestions for students and teachers
+- Voice-activated report generation
+- Analytics dashboards with AI insights
+- Multi-school & multi-branch support
+- Mobile application support
+- Integration with LMS platforms
+
+---
+
 ## Project Architecture
 
 The ClassSight system is built with a modular architecture for scalability and maintainability:
@@ -211,8 +243,7 @@ For detailed role hierarchy, see [SYSTEM_ROLES_HIERARCHY_REFERENCE.png](SYSTEM_R
 
 3. Navigate to the main directory:
    ```bash
-   cd CLASSSIGHT-PIOTS\ CODE
-   ```
+cd "CLASSSIGHT-PIOTS CODE"   ```
 
 4. Run the application:
    ```bash
